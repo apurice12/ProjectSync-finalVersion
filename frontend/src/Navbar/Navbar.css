@@ -1,0 +1,70 @@
+.main-navbar {
+    width: 100%;
+    background-color: #fff; /* Match the hero section's background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* A subtle shadow for depth */
+    position: fixed; /* Make navbar stick to the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Higher index to ensure it's above other content */
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%; /* Match the hero section's horizontal padding */
+    height: 60px; /* Adjust as needed */
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+    color: #4154f1; /* A blue that matches the hero section's button */
+    text-decoration: none;
+    font-size: 1.5rem; /* Adjust as needed */
+  }
+  
+  .navbar-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-links a {
+    color: #333; /* A color for the links that's not too stark */
+    text-decoration: none;
+    margin-left: 30px; /* Space out the links */
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-links a:hover {
+    color: #4154f1; /* Hover color that matches the button */
+  }
+  
+  .navbar-button {
+    padding: 8px 16px;
+    background-color: #4154f1;
+    border-radius: 5px;
+    color: white !important;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar-button:hover {
+    background-color: #364fd7; /* A slightly darker blue on hover */
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .navbar-links {
+      display: none; /* Hide links on small screens, show menu button instead */
+    }
+  
+    .navbar-container {
+      justify-content: space-between;
+    }
+  
+    .navbar-brand {
+      margin-right: auto; /* Ensure brand is on the left */
+    }
+    
+    /* Add your menu button for small screens here */
+  }

@@ -1,0 +1,330 @@
+/* Main layout styles */
+.lp-container {
+    display: flex;
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    margin-top: 2%;
+    gap: 30px;
+    align-items: flex-start;
+    text-align: justify;
+    min-height: 100vh;
+    
+    
+  }
+  .lp-comments-grid-container {
+    max-height: 750px; /* Adjust based on your layout needs */
+    overflow-y: auto; /* Enables vertical scrolling */
+    padding-right: 15px; /* Optional: Adjusts for scrollbar width to prevent content clipping */
+  }
+  
+  /* Sidebar styles */
+  .lp-sidebar {
+
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-left: 1.66%;
+
+  }
+  
+  /* List styles */
+
+  .lp-category-list {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    
+    
+  }
+  .lp-category-list a svg {
+    margin-right: 8px; /* Space between icon and text */
+  }
+  
+  .lp-category-list li {
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+     /* Ensure some space between the icon and text */
+
+    width: 210px;
+  }
+  
+  .lp-category-list li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 9px; /* Add some padding for better touch interaction */
+    display: flex; /* Align icon and text */
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Make the link fill the li for larger clickable area */
+    border-radius: 5px; /* Match the hover state's border radius */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+
+  }
+  
+  .lp-category-list li a:hover, .lp-category-list li a:focus {
+    background-color: #ececec; /* Slight background color on hover/focus for feedback */
+    color: #000; /* Optionally change text color on hover/focus for better contrast */
+    text-decoration: none; /* Ensure no underline appears on hover/focus */
+  }
+  
+  /* Additional styling to highlight the currently selected category */
+  .lp-category-list li a.active {
+    background-color: #007bff !important; /* A different background color for the active link */
+    color: #fff; /* White text color for better contrast against the active background */
+  }
+  
+  /* Main content area */
+  .lp-latest-posts-container {
+    flex-grow: 1;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+  }
+  
+  /* Search bar */
+  .lp-search-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+  }
+  
+  .lp-search-bar {
+    width: 100%;
+    max-width: 1500px;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    border-radius: 20px;
+    outline: none;
+    margin-right: 15px;
+    color:black;
+
+  }
+  
+  .lp-search-container button {
+    background-color: #5c6bc0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .lp-search-container button:hover {
+    background-color: #3f51b5;
+  }
+  
+  /* Card styles */
+.lp-comment-card {
+  background-color: #f2f2f2; /* Bright and clean background */
+  border: 1px solid #ddd; /* Slight border for definition */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow for depth */
+  border-radius: 10px; /* Rounded corners for a modern look */
+  overflow: hidden; /* Ensure nothing bleeds outside the border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  margin-bottom: 22px;
+
+}
+  
+
+  
+  .lp-post-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .lp-user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .lp-user-details {
+    display: flex;
+    align-items: center;
+  }
+  
+  .lp-user-details em {
+    margin-left: 10px;
+    font-weight: 500;
+  }
+  
+  .lp-comment-date {
+    color: #6c757d;
+    font-size: 0.85rem;
+  }
+  
+  .lp-comment-content {
+    padding: 20px;
+  }
+  
+  .lp-comment-info {
+
+    bottom: 15px; /* Adjust as needed */
+    right: 15px; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    text-align: right;
+    gap: 10px; /* Adds space between the category and capacity elements */
+  }
+  
+  /* Category tag */
+  .lp-category-tag {
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    padding: 5px 15px;
+    color: #555;
+  }
+  
+  /* Capacity info */
+  .lp-capacity-info {
+
+    border-radius: 15px;
+    padding: 5px 15px ;
+  }
+  
+  /* Utilizing 'success' and 'danger' colors for capacity */
+  .lp-text-success {
+    color: #28a745;
+  }
+  
+  .lp-text-danger {
+    color: #dc3545;
+  }
+  
+  .lp-no-posts {
+    text-align: center;
+    color: #6c757d;
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+ /* Responsive adjustments for mobile screens */
+@media (max-width: 768px) {
+    /* Stack sidebar and main content on top of each other */
+    .lp-container {
+      flex-direction: column;
+    }
+  
+    /* Make the sidebar full width and adjust the order */
+    .lp-sidebar {
+      order: 0;
+      flex: 0 0 auto;
+      width: 100%;
+      margin-bottom: 20px; /* Space between sidebar and post container */
+      text-align: center;
+    }
+  
+    /* Adjust the main content container to be full width */
+    .lp-latest-posts-container {
+      order: 1;
+      width: 100%;
+      max-width: 100%; /* Ensure it doesn't exceed the width of small screens */
+      margin-top: 0;
+    }
+  
+    /* Search bar full width */
+    .lp-search-container {
+      justify-content: center; /* Center the search bar */
+    }
+  
+    .lp-search-bar {
+      max-width: 100%; /* Full width on smaller screens */
+      margin-right: 0; /* Align with the right edge */
+    }
+  
+    /* Search button occupies its own space below the search bar on smaller screens */
+    .lp-search-container button {
+      width: 100%;
+      margin-top: 10px; /* Space between search bar and button */
+    }
+  }
+  .lp-comment-card {
+    position: relative;
+    /* ... other styles ... */
+  }
+  
+  .lp-comment-footer {
+ 
+    bottom: 10px;
+    left: 10px; /* Align to the bottom left */
+    right: 10px;
+    display: flex;
+    justify-content: space-between; /* Adjust this if you want different spacing */
+    align-items: center;
+    width: calc(100% - 20px); /* Adjust based on your left/right spacing to prevent overflow */
+    padding:10px;
+
+    
+  }
+  
+  
+  .lp-category-tag {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 5px 10px;
+    color: #333;
+    margin-right: 10px; /* Space between category and capacity */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    font-size: 0.85rem;
+  }
+  
+  .lp-capacity-info {
+
+    color: #fff;
+    border-radius: 15px;
+    padding: 5px 10px;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .lp-capacity-info:before {
+
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  .Categories{
+    
+    text-align: left;
+    margin-top:2%;
+    font-size: 25px;
+  }
+  .lp-search-bar::placeholder {
+    color: #999; /* Change placeholder color to gray */
+  }
+  .view-button {
+    background-color: #007bff; /* Primary color */
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.2s;
+    font-size: 1rem;
+    font-weight: 600; /* Slightly bolder */
+    border-radius: 20px;
+  }
+  
+  .view-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  }
+  
+  .view-button:active {
+    background-color: #004094; /* Even darker */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Pressed effect */
+  }
+  #postButton{
+ margin-top:5%;
+ text-align: center;
+  }
+  

@@ -1,0 +1,577 @@
+
+.profile-container {
+
+    margin: 20px;
+    font-family: 'Poppins', sans-serif; /* Updated font family for a more modern look */
+  }
+  
+  .profile-row {
+    display: flex;
+    width: 100%;
+    margin-top: 40px;
+    
+  }
+  
+  .profile-col-lg-4, .content-col-lg-8 {
+    padding: 15px;
+  }
+  
+  .profile-card {
+    background-color: #fff;
+    border-radius: 12px; /* Slightly larger border-radius for a softer look */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Updated shadow for more depth */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  .profile-z-depth-3 {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.12); /* Deeper shadows for more depth */
+  }
+  
+  .profile-card-body {
+    padding: 20px;
+  }
+  
+  .profile-text-center {
+    text-align: center;
+  }
+  
+  .profile-bg-primary {
+    background: linear-gradient(135deg, #007bff, #6610f2); /* Gradient background for a more vibrant look */
+  }
+  
+  .profile-rounded-top {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  
+  .profile-user-box {
+    padding: 20px;
+  }
+  
+  .profile-picture-img {
+    width: 200px; /* Increased size */
+    height: 200px; /* Increased size */
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff; /* Thicker border */
+    margin-bottom: 15px; /* Adjusted spacing */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Shadow for depth */
+  }
+  
+  .profile-text-white {
+    color: #fff;
+    margin-top: -1.75%;
+  }
+  
+  .profile-text-light {
+    color: #f8f9fa;
+  }
+  
+  .profile-list-group {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+  
+  .profile-list-item:hover {
+    background-color: #f0f0f0; /* Subtle hover effect */
+  }
+  
+  
+  
+  .profile-stats-body {
+    padding: 20px;
+    
+  }
+  
+  .profile-stats-row {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 25px;
+  }
+  
+  .profile-stats-col {
+    text-align: center;
+  }
+  
+  .profile-stats-value {
+    font-size: 24px; /* Larger font size for emphasis */
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .profile-stats-label {
+    display: block;
+    color: #666;
+  }
+  
+    
+  .buttons-neu {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  
+  }
+  .btn-neu {
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 30px;
+    
+  }
+  .btn-primary-neu {
+    background-color: #7e57c2;
+    color: white;
+    border-radius: 20px !important;
+  }
+  
+  .profile-card {
+    position: relative; /* Add this line */
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    overflow: hidden;
+    /* The rest of your styles */
+  }
+  .content-col-lg-12 {
+    width: 100%; /* Ensure it takes up the full width */
+    padding: 20px; /* Add some padding for spacing */
+   
+    border-radius: 8px; /* Soften the edges */
+   
+    margin-top: 20px; /* Space it out from elements above */
+    font-family: 'Poppins', sans-serif; /* Consistent font family */
+    color: #333; /* Dark color for text for readability */
+    font-size: 18px; /* Slightly larger font size */
+    font-weight: 400; /* Medium weight for the header */
+  }
+  
+  #user-applications-section {
+  
+  text-align: center;
+  }
+  .profile-neu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f3;
+    padding-top: 25px; /* Reduced to accommodate the half-out picture */
+    color: #333;
+  }
+  
+  .profile-picture-container-neu {
+    background: #f0f0f3;
+    border-radius: 50%;
+    padding: 10px; /* Adjust padding to better fit the half-out design */
+    
+    margin-bottom: -75px; /* Adjust to properly position the container */
+    margin-top:2%;
+  }
+  
+  .profile-picture-neu {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative; /* Position relative to allow z-index to take effect */
+    z-index: 1; /* Ensure the image is above other content */
+    top: 50px;
+  }
+  
+  .profile-content-neu {
+    width: 90%;
+    margin-top: 30px; /* Increase to compensate for the half-out picture */
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 20px;
+    position: relative; /* Ensure content is positioned correctly with z-index */
+    z-index: 0; /* Ensure the content is below the picture */
+  }
+  
+  .name-neu {
+    font-family: 'Open Sans', sans-serif; /* Use Open Sans for a more distinctive heading */
+    font-size: 2rem; /* Increase font size for prominence */
+    color: #333; /* Consider a darker shade for better readability */
+    font-weight: 600; /* A bolder weight for the name */
+    margin: 70px 0 10px; /* Adjusted margins */
+  }
+  
+  .title-neu {
+    font-family: 'Roboto', sans-serif; /* Consistent with body text for readability */
+    font-size: 1.5rem; /* Slightly larger than default for importance */
+    color: #555; /* A softer color for subtlety */
+    font-weight: 300; /* Medium weight for a balanced appearance */
+    margin-bottom: 20px; /* Provide adequate spacing from the name */
+  }
+  
+  .buttons-neu {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  
+  }
+  
+  .btn-neu {
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 30px;
+    
+  }
+  
+  .btn-primary-neu {
+    background-color: #7e57c2;
+    color: white;
+    border-radius: 20px !important;
+  }
+  
+  .btn-outline-primary-neu {
+    background-color: transparent;
+    color: #7e57c2;
+    border: 2px solid #7e57c2;
+  }
+  
+  .btn-neu:hover {
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+  }
+  
+  .section-neu {
+    margin-top: 30px;
+  }
+  
+  @media (max-width: 768px) {
+    .profile-picture-neu {
+      width: 125px;
+      height: 125px;
+    }
+  
+    .profile-content-neu {
+      margin-top: 60px;
+    }
+  
+    .name-neu, .title-neu {
+      font-size: smaller;
+    }
+  }
+  .ProjectSync-YourPosts {
+    font-size: 1.25rem;
+    color: #555;
+    text-align: center;
+    margin-top: 2rem;
+    font-weight: 600;
+  }
+  
+  .ProjectSync-horizontal-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .ProjectSync-card {
+    background: linear-gradient(145deg, #ffffff, #e6e9ec);
+    box-shadow: 6px 6px 12px #aaaaaa,
+                -6px -6px 12px #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .ProjectSync-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .ProjectSync-card-header {
+    padding: 15px;
+    background: #4154f1; /* A professional blue gradient top bar */
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  .ProjectSync-profile-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .ProjectSync-round-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffffff; /* Make the profile picture pop */
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
+  }
+  
+  .ProjectSync-card-title {
+   
+    font-size: 1.1rem;
+    font-weight: 500;
+  
+  }
+  
+  .ProjectSync-badge {
+    padding: 5px 10px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.1);
+  }
+  
+  .badge-success {
+    background-color: #4caf50;
+  }
+  
+  .badge-danger {
+    background-color: #f44336;
+  }
+  
+  .badge-warning {
+    background-color: #ff9800;
+  }
+  
+  .ProjectSync-card-content {
+    padding: 15px;
+  }
+  
+  .ProjectSync-card-text {
+  
+    text-align: justify;
+    margin-top: 9px; /* Space from the top */
+    margin-bottom: 1rem; /* Space from the bottom */
+    max-height: 250px; /* Adjust the max height as needed */
+  
+  }
+  
+  .ProjectSync-room-info p {
+    color: #4caf50;
+    font-size: 0.95rem;
+    margin-bottom: 0px;
+    padding: 0 15px;
+  }
+  
+  .ProjectSync-horizontal-scroll-container {
+    display: flex;
+    flex-wrap: nowrap; /* Ensures cards are in a single row */
+    overflow-x: auto; /* Allows horizontal scrolling */
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .ProjectSync-card {
+    flex: 0 0 auto; /* Cards don't grow or shrink */
+    width: 58.5rem; /* Fixed width */
+    height: 25rem;
+    display: flex;
+    flex-direction: column; /* Children stacked vertically */
+    background: linear-gradient(145deg, #ffffff, #e6e9ec);
+    box-shadow: 6px 6px 12px #aaaaaa, -6px -6px 12px #ffffff;
+    border-radius: 15px;
+    overflow: hidden; /* Hide overflowed content */
+    margin-right: 20px; /* Add space between cards */
+    transition: transform 0.3s ease;
+    position: relative; /* For positioning child elements absolutely if needed */
+    text-align: center;
+  }
+  .ProjectSync-card-content {
+    flex-grow: 1; /* Allows this section to fill available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    padding: 15px;
+  }
+  /* Optional: Styling the scrollbar for aesthetics */
+  .ProjectSync-horizontal-scroll-container::-webkit-scrollbar {
+    height: 8px; /* Height of the horizontal scrollbar */
+  }
+  
+  .ProjectSync-horizontal-scroll-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color of the track */
+  }
+  
+  .ProjectSync-horizontal-scroll-container::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar thumb */
+    border-radius: 4px; /* Optional: Rounded corners for the thumb */
+  }
+  
+  .ProjectSync-horizontal-scroll-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Darker color on hover for the thumb */
+  }
+  .view-more-btn {
+    background: none;
+    border: none;
+    color: #7e57c2;
+    cursor: pointer;
+    display: inline; /* Keep the button in line with the text */
+    padding: 0;
+    margin-left: 5px;
+  }
+  
+  .view-more-btn:hover {
+    text-decoration: underline; /* Suggest clickability */
+  }
+  .upload-button-label {
+    display: inline-block; /* Allows padding and other block properties */
+    padding: 8px 15px; /* Matches button padding */
+    background-color: #007bff; /* Matches primary button color */
+    color: white;
+    border-radius: 20px; /* Rounds the corners */
+    cursor: pointer;
+  
+  }
+  
+  .upload-button-label:hover {
+    background-color: #0056b3; /* Darker shade for hover state */
+  }
+  
+  #file-input {
+    display: none; /* Keeps the actual input hidden */
+  }
+  @media (max-width: 768px) {
+    .profile-row, .profile-stats-row {
+      flex-direction: column;
+    }
+  
+    .profile-picture-img {
+      width: 150px; /* Smaller profile picture on smaller screens */
+      height: 150px;
+    }
+  
+    .profile-stats-col, .profile-col-lg-4, .content-col-lg-8 {
+      width: 100%; /* Full width for small screens */
+      margin-top: 20px;
+    }
+  
+    .profile-stats-value, .profile-stats-label {
+      font-size: smaller; /* Adjust font size for readability */
+    }
+  
+    .ProjectSync-card {
+      width: 100%; /* Make cards full width */
+    }
+  
+    .btn-neu, .btn-primary-neu {
+      padding: 8px 16px; /* Smaller buttons on smaller screens */
+    }
+  }
+  
+  /* Handling very small screens */
+  @media (max-width: 480px) {
+    .profile-picture-img {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .name-neu, .title-neu {
+      font-size: smaller; /* Further reduce font size for very small screens */
+    }
+  }
+  .notification-badge {
+  
+    background-color: #ff4500;
+    color: white;
+    border-radius: 50%;
+    padding: 0.30em 0.70em;
+    font-size: 0.75em;
+    font-weight: bold;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2); /* Soft shadow for depth */
+    border: 2px solid white; /* Border to distinguish from button background */
+    margin-left: 5px;
+  }
+  
+  /* Optional: Add a slight scale effect on hover for visual feedback */
+  .show-applications-button .notification-badge:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  #user-applications-section {
+  
+    border-radius: 8px; /* Rounded corners for a modern look */
+    padding: 20px; /* Spacing inside the section */
+    margin: 20px 0; /* Spacing outside the section */
+  
+    display: flex; /* Ensures content is flexibly arranged */
+    flex-direction: column; /* Arranges content in a column */
+    align-items: center; /* Aligns items in the center horizontally */
+  }
+  
+  #user-applications-section h2 {
+    color: #495057; /* Dark grey for the title text */
+    margin-bottom: 15px; /* Space below the title */
+    font-weight: bold; /* Makes the title bold */
+    font-size: 24px; /* Larger font size for the title */
+    text-align: center; /* Centers the title text */
+  }
+  .custom-modal .modal-header-custom {
+    background-color: #005f73; 
+    color: white;
+  }
+  .modal-body-custom {
+    background-color: #f0f0f0;
+    overflow-y: auto;
+    max-height: 500px;
+  }
+    .application-card {
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .profile-image {   width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+    .application-flex-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .profile-and-name {
+      display: flex;
+      align-items: center;
+    }
+    .card-title {
+      margin-bottom: 0;
+      font-size: 1.25rem; 
+      color: #333; 
+    }
+    
+    .details-button {
+      background: none;
+      border: none;
+      color: #007bff;
+      padding: 0;
+      }
+  
+    .application-content, .application-about-content {
+      color: #495057; 
+    }
+    .application-about-title {
+      font-weight: bold;
+      margin-top: 1rem;
+      color: #005f73;
+    }
+    .action-buttons {
+      display: flex;
+      justify-content: flex-end;
+    }
+      .accept-button, .decline-button {
+        display: inline-flex;
+        align-items: center;
+      }
+    
+  
+  
+  

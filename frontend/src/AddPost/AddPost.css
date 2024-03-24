@@ -1,0 +1,62 @@
+/* AddPost.css */
+.add-post-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    border: 1px solid #e1e4e8;
+    
+        margin-top:5.5%
+      }
+      
+      .add-post-title {
+        margin-bottom: 20px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: #333;
+      }
+      
+      .form-group {
+        margin-bottom: 1rem;
+      }
+      
+      .form-group input,
+      .form-group textarea,
+      .form-group select {
+        width: 100%;
+        padding: 12px 15px;
+        border-radius: 4px;
+        border: 1px solid #ccd6dd;
+        box-sizing: border-box; /* Added to include padding in the width */
+        transition: border-color 0.3s;
+      }
+      
+      .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: #666;
+      }
+      
+      .button-group-posts {
+        display: flex;
+        justify-content: flex-end;
+        gap: 0.1rem;
+      }
+      
+    
+      
+    
+      
+      /* Adjust the background-color, color as per your theme */
+      .title-post{
+        text-align: center;
+    margin-bottom: 4%;
+      }
+      @media (max-width: 768px) {
+        /* Stack sidebar and main content on top of each other */
+        .add-post-container {
+          margin-top: 25%;
+        }}

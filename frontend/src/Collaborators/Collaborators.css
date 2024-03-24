@@ -1,0 +1,38 @@
+
+
+#navbar-chat{
+
+    margin-top:5.3%;
+    background: #fff; /* White background for contrast */
+    border-right: 1px solid #e0e0e0; /* Subtle separator */
+    margin-top: 4.4%; /* Adjusted to align with the top */
+    background-color: #f8f9fa; 
+
+    
+}
+
+#chatroom{
+    height: 50rem;
+    margin-top:7%;
+    width: 98%;
+    background-color: #f8f9fa;
+
+}
+
+  @media (max-width: 768px) {
+    #navbar-chat{
+
+        margin-top:5.3%;
+        background: #fff; /* White background for contrast */
+        border-right: 1px solid #e0e0e0; /* Subtle separator */
+        margin-top: 14%; /* Adjusted to align with the top */
+        background-color: white;
+    }
+    #chatroom{
+        width:100%;
+    }
+  }
+  #content-chat{
+    background-color: #f8f9fa;
+    
+  }
