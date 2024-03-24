@@ -3,6 +3,6 @@ COPY . .
 
 
 FROM openjdk:15.0.2-jdk-slim
-COPY --from=build /target/demo-0.0.2-SNAPSHOT.jar demo.jar
+COPY ProjectSync-backend/target/demo-0.0.1-SNAPSHOT.jar demo.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "demo.jar"]
