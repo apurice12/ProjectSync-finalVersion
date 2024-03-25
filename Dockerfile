@@ -5,7 +5,7 @@ FROM node:21 as react-build
 WORKDIR /app/frontend
 
 # Copy the React app files into the container
-COPY ./frontend/package.json ./path/to/your/react-app/package-lock.json* ./
+COPY ./frontend/package.json ./frontend/package-lock.json* ./
 
 # Install dependencies
 RUN npm install
