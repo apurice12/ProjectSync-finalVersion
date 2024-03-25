@@ -81,6 +81,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             }
         };
     }
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**")
+                .allowedOrigins("https://projectsync-finalversion-1.onrender.com/")
+                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                .allowedHeaders("*")
+                .allowCredentials(true);
+    }
 
     @Override
     @Bean // Expose AuthenticationManager as a bean
