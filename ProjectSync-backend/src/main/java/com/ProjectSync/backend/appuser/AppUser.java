@@ -49,7 +49,7 @@ public class AppUser implements UserDetails {
     @Enumerated(EnumType.STRING)
     private AppUserRole appUserRole;
     private Boolean locked = false;
-    private Boolean enabled = false; //True if i want to get rid of email confirmation
+    private Boolean enabled = true; //True if i want to get rid of email confirmation
     @OneToMany(mappedBy = "appUser", cascade = CascadeType.ALL)
     @JsonManagedReference
     private List<Comment> comments;

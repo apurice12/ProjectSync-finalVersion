@@ -1,3 +1,20 @@
+FROM node:21 as react-build
+
+# Set the working directory in the Docker image
+WORKDIR /app/frontend
+
+# Copy the React app files into the container
+COPY ./frontend/package.json ./frontend/package-lock.json* ./
+
+# Install dependencies
+RUN npm install
+
+# Copy the rest of your frontend app
+COPY ./frontend/ ./
+
+# Build the React app
+RUN npm run build
+
 # Stage 1: Build the application using JDK 15
 FROM openjdk:15.0.2 AS build
 
@@ -39,3 +56,5 @@ EXPOSE 8080
 
 # Command to run the application
 ENTRYPOINT ["java", "-jar", "app.jar"]
+
+
