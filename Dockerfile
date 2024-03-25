@@ -1,6 +1,5 @@
-
-# Stage 1: Build the Java application using JDK 15
-FROM openjdk:15.0.2 AS java-build
+# Stage 1: Build the application using JDK 15
+FROM openjdk:15.0.2 AS build
 
 # Manually download and install Maven
 ENV MAVEN_VERSION 3.6.3
@@ -32,12 +31,8 @@ FROM openjdk:15.0.2-jdk-slim
 
 WORKDIR /app
 
-# Copy the JAR file from the Java build stage
-COPY --from=java-build /app/target/*.jar app.jar
-
-# Copy the React build artifacts from the React build stage to the static directory
-# Adjust the target directory according to where your backend serves static files from
-COPY --from=react-build /app/frontend/build /path/to/static/content
+# Copy the JAR file from the build stage
+COPY --from=build /app/target/*.jar app.jar
 
 # Expose the port the application listens on
 EXPOSE 8080
