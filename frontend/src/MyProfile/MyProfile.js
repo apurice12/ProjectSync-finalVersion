@@ -159,7 +159,6 @@ const MyProfile = () => {
           
         } catch (error) {
           console.error('Error uploading the profile picture:', error);
-          window.location.reload();
           alert('Profile picture uploaded succesfully!')
           
         }

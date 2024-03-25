@@ -193,7 +193,7 @@ const PostPage =() => {
                       {comment.screenName === userDetails.screenName ? (
                         <div className="lp-user-details">
                           <img
-                            src={`https://projectsync-finalversion.onrender.com/api/user/${comment.screenName}/picture`}
+                             src={`https://projectsync-finalversion.onrender.com/api/user/${comment.screenName}/picture`}
                             alt="Profile"
                             className="lp-user-image"
                             onError={(e) => (e.target.src = 'profilePicture.png')}
@@ -203,7 +203,7 @@ const PostPage =() => {
                       ) : (
                         <div className="lp-user-details">
                           <img
-                            src={`https://projectsync-finalversion.onrender.com/api/user/${comment.screenName}/picture`}
+                             src={`https://projectsync-finalversion.onrender.com/api/user/${comment.screenName}/picture`}
                             alt="Profile"
                             className="lp-user-image"
                             onError={(e) => (e.target.src = 'profilePicture.png')}
