@@ -1,23 +1,23 @@
-# Stage 1: Build the application
-FROM maven:3.8.4-openjdk-11 AS build
+# Stage 1: Build the application using JDK 15
+FROM openjdk:15.0.2 AS build
+
+# Install Maven
+RUN apt-get update && \
+    apt-get install -y maven
 
 # Set the working directory in the Docker image
 WORKDIR /app
 
-# Optionally specify MAVEN_HOME and MAVEN_CONFIG if you suspect configuration issues
-ENV MAVEN_HOME /usr/share/maven
-ENV MAVEN_CONFIG "$MAVEN_HOME/conf"
-
 # Copy the project files into the container
 COPY ProjectSync-backend/pom.xml .
 
-# Download all dependencies. Use the mvn command directly, ensuring no wrapper-induced issues.
+# Download all dependencies
 RUN mvn dependency:go-offline
 
 # Copy the rest of the application source
 COPY ProjectSync-backend/src src
 
-# Build the application without running tests. Directly use mvn to avoid wrapper issues.
+# Build the application without running tests
 RUN mvn clean package -DskipTests
 
 # Stage 2: Create the final image
