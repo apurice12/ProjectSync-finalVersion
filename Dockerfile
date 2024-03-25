@@ -10,7 +10,7 @@ RUN npm install && npm run build
 FROM openjdk:15 as backend-build
 WORKDIR /ProjectSync-backend
 # Copy backend jar
-COPY ProjectSync-backend/project-sync.jar .
+COPY ProjectSync-backend/project-sync-exe.jar .
 
 # Stage 3: Nginx to serve the frontend
 FROM nginx:alpine
