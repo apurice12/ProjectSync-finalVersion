@@ -41,7 +41,7 @@ const Collaborators = () => {
 
   const fetchUserDetails = async (userId) => {
     try {
-      const response = await fetch(`http://localhost:8080/api/user/${userId}`, {
+      const response = await fetch(`https://projectsync-finalversion.onrender.com/api/user/${userId}`, {
         method: 'GET',
 
       });
@@ -70,7 +70,7 @@ const Collaborators = () => {
     const fetchRoomsForUser = async () => {
       try {
         const email = userDetails.screenName; // Adjust according to how you store the user's email
-        const response = await axios.get(`http://localhost:8080/users/chat/rooms/${userDetails.screenName}`);
+        const response = await axios.get(`https://projectsync-finalversion.onrender.com/users/chat/rooms/${userDetails.screenName}`);
         const userRooms = response.data;
 
         // Directly set fetched rooms without adding "UniversalRoom"
@@ -93,7 +93,7 @@ const Collaborators = () => {
 
 
   useEffect(() => {
-    const sockJS = new SockJS('http://localhost:8080/ws');
+    const sockJS = new SockJS('https://projectsync-finalversion.onrender.com/ws');
     const stompClient = new Client({
       webSocketFactory: () => sockJS,
       debug: (str) => console.log(str),
@@ -133,7 +133,7 @@ const Collaborators = () => {
 
   const fetchHistoricalMessages = async (room) => {
     try {
-      const response = await axios.get(`http://localhost:8080/users/chat/${room}/messages`);
+      const response = await axios.get(`https://projectsync-finalversion.onrender.com/users/chat/${room}/messages`);
       setMessages(response.data);
     } catch (error) {
       console.error("Error fetching historical messages:", error.response);
@@ -212,7 +212,7 @@ const Collaborators = () => {
       {messages.map((msg, index) => (
         <div key={index} className={`d-flex ${msg.senderEmail === userDetails.screenName ? 'flex-row-reverse' : ''} align-items-start mb-3`}>
           <img
-            src={`http://localhost:8080/api/user/${msg.senderEmail}/picture`}
+            src={`https://projectsync-finalversion.onrender.com/api/user/${msg.senderEmail}/picture`}
             alt="Profile"
             className="rounded-circle"
             onError={(e) => e.target.src = 'profilePicture.png'}

@@ -374,7 +374,7 @@
   .ProjectSync-card {
     flex: 0 0 auto; /* Cards don't grow or shrink */
     width: 58.5rem; /* Fixed width */
-    height: 25rem;
+    height: 27rem;
     display: flex;
     flex-direction: column; /* Children stacked vertically */
     background: linear-gradient(145deg, #ffffff, #e6e9ec);

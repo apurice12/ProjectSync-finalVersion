@@ -47,7 +47,7 @@ const MainPage = () => {
 
   const fetchUserDetails = async (userId) => {
     try {
-      const response = await fetch(`http://localhost:8080/api/user/${userId}`, {
+      const response = await fetch(`https://projectsync-finalversion.onrender.com/api/user/${userId}`, {
         method: 'GET',
 
       });
@@ -83,8 +83,8 @@ const MainPage = () => {
       // If 'All Categories' is selected, you might not want to append a category filter in your request
       const url =
         category === "All Categories"
-          ? `http://localhost:8080/api/comments`
-          : `http://localhost:8080/api/comments/${encodeURIComponent(
+          ? `https://projectsync-finalversion.onrender.com/api/comments`
+          : `https://projectsync-finalversion.onrender.com/api/comments/${encodeURIComponent(
               category
             )}`;
 
@@ -166,7 +166,7 @@ const MainPage = () => {
             {comment.screenName === userDetails.screenName ? (
               <div className="user-details">
                 <img
-                  src={`http://localhost:8080/api/user/${comment.screenName}/picture`}
+                  src={`https://projectsync-finalversion.onrender.com/api/user/${comment.screenName}/picture`}
                   alt="Profile"
                   className="user-image"
                   onError={(e) => (e.target.src = 'profilePicture.png')}
@@ -176,7 +176,7 @@ const MainPage = () => {
             ) : (
               <div className="user-details">
                 <img
-                  src={`http://localhost:8080/api/user/${comment.screenName}/picture`}
+                  src={`https://projectsync-finalversion.onrender.com/api/user/${comment.screenName}/picture`}
                   alt="Profile"
                   className="user-image"
                   onError={(e) => (e.target.src = 'profilePicture.png')}

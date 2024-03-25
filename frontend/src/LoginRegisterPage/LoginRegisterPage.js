@@ -85,7 +85,7 @@ const NavBar = ({ setShowLogin }) => {
       };
 
       try {
-        const response = await fetch('http://localhost:8080/login', requestOptions);
+        const response = await fetch('https://projectsync-finalversion.onrender.com/login', requestOptions);
   
         // Log the response for debugging
         console.log('Login response:', response);
@@ -163,15 +163,17 @@ const NavBar = ({ setShowLogin }) => {
       };
   
       try {
-        const response = await fetch('http://localhost:8080/api/v1/registration', requestOptions);
+        const response = await fetch('https://projectsync-finalversion.onrender.com/api/v1/registration', requestOptions);
         if (!response.ok) {
           throw new Error('Failed to register. Please try again later.');
         }
         const data = await response.json();
         console.log('Registration successful:', data);
+        alert('Verify you email address!')
         // Handle successful registration here (e.g., redirect or show success message)
       } catch (error) {
         console.error('Registration error:', error);
+        alert('Verify you email address!')
         // Handle registration error here (e.g., show error message)
       }
     };
