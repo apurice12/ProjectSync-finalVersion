@@ -38,7 +38,7 @@ const MyProfile = () => {
  
       const fetchUserDetails = async (userId) => {
         try {
-          const response = await fetch(`https://projectsync-finalversion.onrender.com/api/user/${userId}`, {
+          const response = await fetch(`http://localhost:8080/api/user/${userId}`, {
             method: 'GET',
     
           });
@@ -74,7 +74,7 @@ const MyProfile = () => {
         event.preventDefault(); // Prevent default form submission behavior
       
         try {
-          const response = await fetch(`https://projectsync-finalversion.onrender.com/api/user/${userDetails.id}`, {
+          const response = await fetch(`http://localhost:8080/api/user/${userDetails.id}`, {
             method: 'PUT', // Specify the request method
             headers: {
               'Content-Type': 'application/json', // Specify the content type in the headers
@@ -115,7 +115,7 @@ const MyProfile = () => {
       const [applicantsList, setApplicantsList] = useState([]);
       useEffect(() => {
         // Construct the URL with the screenName
-        const url = `https://projectsync-finalversion.onrender.com/api/user/apply/by-appliant/${userDetails.screenName}`;
+        const url = `http://localhost:8080/api/user/apply/by-appliant/${userDetails.screenName}`;
     
         const fetchData = async () => {
           try {
@@ -144,7 +144,7 @@ const MyProfile = () => {
         formData.append("file", selectedFile);
       
         try {
-          const response = await fetch(`https://projectsync-finalversion.onrender.com/api/user/${userDetails.screenName}/profile-picture`, {
+          const response = await fetch(`http://localhost:8080/api/user/${userDetails.screenName}/profile-picture`, {
             method: 'POST',
             body: formData,
     
@@ -181,7 +181,7 @@ const MyProfile = () => {
 
       useEffect(() => {
         const fetchComments = async () => {
-          const response = await fetch(`https://projectsync-finalversion.onrender.com/api/comments/user/${userDetails.email}`);
+          const response = await fetch(`http://localhost:8080/api/comments/user/${userDetails.email}`);
           const data = await response.json();
           setComments(data);
         };
@@ -209,7 +209,7 @@ const MyProfile = () => {
   
     try {
       const response = await fetch(
-        `https://projectsync-finalversion.onrender.com/api/comments/${commentId}`,
+        `http://localhost:8080/api/comments/${commentId}`,
         {
           method: "PUT", // or 'PATCH'
           headers: {
@@ -237,7 +237,7 @@ const MyProfile = () => {
    
     try {
       const response = await fetch(
-        `https://projectsync-finalversion.onrender.com/api/comments/${commentId}`,
+        `http://localhost:8080/api/comments/${commentId}`,
         {
           method: "DELETE",
           headers: {
@@ -257,7 +257,7 @@ const MyProfile = () => {
   const fetchComments = async () => {
     try {
       const response = await fetch(
-        `https://projectsync-finalversion.onrender.com/api/comments/user/${userDetails.email}`
+        `http://localhost:8080/api/comments/user/${userDetails.email}`
       );
       if (!response.ok) {
         throw new Error("Failed to fetch comments");
@@ -277,7 +277,7 @@ const MyProfile = () => {
     // e.preventDefault();
     setShowApplicationsModal(true); // Open the modal
     try {
-      const response = await fetch(`https://projectsync-finalversion.onrender.com/api/user/apply/by-comment/${commentId}`);
+      const response = await fetch(`http://localhost:8080/api/user/apply/by-comment/${commentId}`);
       if (!response.ok) {
         throw new Error('Failed to fetch applications');
       }
@@ -294,7 +294,7 @@ useEffect(() => {
   // Function to fetch in-progress count for a single comment
   const fetchInProgressCount = async (commentId) => {
     try {
-      const response = await fetch(`https://projectsync-finalversion.onrender.com/api/user/apply/count/in-progress/${commentId}`);
+      const response = await fetch(`http://localhost:8080/api/user/apply/count/in-progress/${commentId}`);
       const count = await response.json(); // assuming the response is just the count
       return count;
     } catch (error) {
@@ -328,7 +328,7 @@ const acceptApplication = async (applicationId) => {
    
   
   try {
-    const response = await fetch(`https://projectsync-finalversion.onrender.com/api/user/apply/${applicationId}/accept`, {
+    const response = await fetch(`http://localhost:8080/api/user/apply/${applicationId}/accept`, {
       method: 'PUT',
       headers: {
   
@@ -354,7 +354,7 @@ const declineApplication = async (applicationId) => {
   
 
   try {
-    const response = await fetch(`https://projectsync-finalversion.onrender.com/api/user/apply/${applicationId}/decline`, {
+    const response = await fetch(`http://localhost:8080/api/user/apply/${applicationId}/decline`, {
       method: 'PUT',
       headers: {
  
@@ -390,7 +390,7 @@ const declineApplication = async (applicationId) => {
                 <div className="profile-card-body profile-text-center profile-bg-primary profile-rounded-top">
                   <div className="profile-user-box">
                     <img
-                      src={`https://projectsync-finalversion.onrender.com/api/user/${userDetails.screenName}/picture`}
+                      src={`http://localhost:8080/api/user/${userDetails.screenName}/picture`}
                       alt="Profile"
                       className="profile-picture-img"
                       id="profile-picture"
@@ -430,15 +430,15 @@ const declineApplication = async (applicationId) => {
                 <div className="profile-stats-body">
                   <div className="profile-stats-row">
                     <div className="profile-stats-col text-center">
-                      <h4 className="profile-stats-value">154</h4>
+                      <h4 className="profile-stats-value">0</h4>
                       <small className="profile-stats-label">Projects Done</small>
                     </div>
                     <div className="profile-stats-col text-center">
-                      <h4 className="profile-stats-value">2</h4>
+                      <h4 className="profile-stats-value">1</h4>
                       <small className="profile-stats-label">Total Posts</small>
                     </div>
                     <div className="profile-stats-col text-center">
-                      <h4 className="profile-stats-value">9.1k</h4>
+                      <h4 className="profile-stats-value">1</h4>
                       <small className="profile-stats-label">Total Applications</small>
                     </div>
                   </div>
@@ -465,7 +465,7 @@ const declineApplication = async (applicationId) => {
                           <div className="ProjectSync-card-header">
                             <div className="ProjectSync-profile-section">
                               <img
-                                src={`https://projectsync-finalversion.onrender.com/api/user/${applicant.owner}/picture`}
+                                src={`http://localhost:8080/api/user/${applicant.owner}/picture`}
                                 alt="Profile"
                                 className="ProjectSync-round-image me-3"
                                 onError={(e) => (e.target.src = 'profilePicture.png')}
@@ -522,7 +522,7 @@ const declineApplication = async (applicationId) => {
             <div className="ProjectSync-card-header">
               <div className="ProjectSync-profile-section">
                 <img
-                  src={`https://projectsync-finalversion.onrender.com/api/user/${userDetails.screenName}/picture`}
+                  src={`http://localhost:8080/api/user/${userDetails.screenName}/picture`}
                   alt="Profile"
                   className="ProjectSync-round-image me-3"
                   onError={(e) => (e.target.src = 'profilePicture.png')}
@@ -657,7 +657,7 @@ const declineApplication = async (applicationId) => {
         <div className="application-flex-container">
           <div className="profile-and-name">
             <img
-              src={`https://projectsync-finalversion.onrender.com/api/user/${application.appliant}/picture`}
+              src={`http://localhost:8080/api/user/${application.appliant}/picture`}
               alt="Profile"
               className="profile-image"
               onError={(e) => (e.target.src = 'profilePicture.png')}

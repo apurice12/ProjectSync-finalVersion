@@ -47,7 +47,7 @@ const MainPage = () => {
 
   const fetchUserDetails = async (userId) => {
     try {
-      const response = await fetch(`https://projectsync-finalversion.onrender.com/api/user/${userId}`, {
+      const response = await fetch(`http://localhost:8080/api/user/${userId}`, {
         method: 'GET',
 
       });
@@ -83,8 +83,8 @@ const MainPage = () => {
       // If 'All Categories' is selected, you might not want to append a category filter in your request
       const url =
         category === "All Categories"
-          ? `https://projectsync-finalversion.onrender.com/api/comments`
-          : `https://projectsync-finalversion.onrender.com/api/comments/${encodeURIComponent(
+          ? `http://localhost:8080/api/comments`
+          : `http://localhost:8080/api/comments/${encodeURIComponent(
               category
             )}`;
 
@@ -166,7 +166,7 @@ const MainPage = () => {
             {comment.screenName === userDetails.screenName ? (
               <div className="user-details">
                 <img
-                  src={`https://projectsync-finalversion.onrender.com/api/user/${comment.screenName}/picture`}
+                  src={`http://localhost:8080/api/user/${comment.screenName}/picture`}
                   alt="Profile"
                   className="user-image"
                   onError={(e) => (e.target.src = 'profilePicture.png')}
@@ -176,7 +176,7 @@ const MainPage = () => {
             ) : (
               <div className="user-details">
                 <img
-                  src={`https://projectsync-finalversion.onrender.com/api/user/${comment.screenName}/picture`}
+                  src={`http://localhost:8080/api/user/${comment.screenName}/picture`}
                   alt="Profile"
                   className="user-image"
                   onError={(e) => (e.target.src = 'profilePicture.png')}
@@ -217,22 +217,22 @@ const MainPage = () => {
 <div className="statistics-container">
       <div className="statistic">
         <FontAwesomeIcon icon={faSmile} className="icon" />
-        <h2>232</h2>
+        <h2>6</h2>
         <p>Users</p>
       </div>
       <div className="statistic">
         <FontAwesomeIcon icon={faFolderOpen} className="icon" />
-        <h2>521</h2>
+        <h2>7</h2>
         <p>Open Projects</p>
       </div>
       <div className="statistic">
       <FontAwesomeIcon icon={faCheckCircle} className="icon" />
-      <h2>3</h2>
+      <h2>1</h2>
       <p>Completed Projects</p>
     </div>
       <div className="statistic">
         <FontAwesomeIcon icon={faUsers} className="icon" />
-        <h2>2157</h2>
+        <h2>24</h2>
         <p>Open positions for projects </p>
       </div>
     </div>

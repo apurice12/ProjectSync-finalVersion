@@ -40,7 +40,7 @@ const AddPost = () => {
 
   const fetchUserDetails = async (userId) => {
     try {
-      const response = await fetch(`https://projectsync-finalversion.onrender.com/api/user/${userId}`, {
+      const response = await fetch(`http://localhost:8080/api/user/${userId}`, {
         method: 'GET',
 
       });
@@ -84,7 +84,7 @@ const AddPost = () => {
 
     try {
       const response = await fetch(
-        `https://projectsync-finalversion.onrender.com/api/comments/user/${userDetails.email}`,
+        `http://localhost:8080/api/comments/user/${userDetails.email}`,
         {
           method: "POST",
           headers: {
